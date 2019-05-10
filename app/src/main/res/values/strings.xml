@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="main_background">Main Background</string>
+    <string name="degree_icon">Degree Icon</string>
+    <string name="weather_icon">Weather Icon</string>
+    <string name="cloudiness">CLOUDINESS</string>
+    <string name="humidity">HUMIDITY</string>
+    <string name="wind_speed">WIND SPEED</string>
+    <string name="atmospheric_pressure">ATMOSPHERIC PRESSURE</string>
+</resources>
