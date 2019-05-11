@@ -19,7 +19,7 @@ import java.util.TimeZone;
 
 public class MainActivity extends AppCompatActivity implements Observer {
 
-    private WeatherApiService service;
+    private final WeatherApiService service = new WeatherApiService();
 
     private ImageView background;
 
@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity implements Observer {
         TimeZone.setDefault(TimeZone.getTimeZone("GMT+6"));
 
         try {
-            service = new WeatherApiService();
             service.subscribe(this);
             service.GetWeatherForecastByCityId("1526395", "metric");
         } catch (Exception ex) {
@@ -68,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
         }
     }
 
-    private void initializeComponents(){
+    private void initializeComponents() {
         this.background = findViewById(R.id.background);
 
         //header
@@ -121,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
 
         //scroller lead info
         this.leadInfo.setText(String.format("Today: %s. Currently it's %s°.",
-                        response.getWeatherDescription(), response.getCurrentTemperature()));
+                response.getWeatherDescription(), response.getCurrentTemperature()));
 
         //scroller main info
         this.humidity.setText(response.getCurrentHumidity());
@@ -130,6 +129,4 @@ public class MainActivity extends AppCompatActivity implements Observer {
         this.atmosphericPressure.setText(response.getCurrentPressure());
 
     }
-
-
 }

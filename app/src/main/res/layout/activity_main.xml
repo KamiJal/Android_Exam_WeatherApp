@@ -51,11 +51,12 @@
             tools:text="Clear Sky" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/temperature_header"
+            android:id="@+id/main_temperature_wrapper"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/day_name"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintHorizontal_bias="0.51"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/weather_description">
 
@@ -93,7 +94,7 @@
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/temperature_header" />
+            app:layout_constraintTop_toBottomOf="@+id/main_temperature_wrapper" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
